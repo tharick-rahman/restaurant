@@ -4,7 +4,15 @@ const navToggle = document.querySelector(".sr-nav-toggle");
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
-    body.classList.toggle("sr-nav-open");
+    const isOpen = body.classList.toggle("sr-nav-open");
+    // Prevent background scroll when mobile nav is open
+    if (isOpen) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
   });
 }
 
@@ -20,12 +28,17 @@ dropdownToggles.forEach((toggle) => {
   // Click handler
   toggle.addEventListener("click", (event) => {
     event.stopPropagation();
-    const isOpen = menu.classList.contains("sr-dropdown-menu-open");
-    document
-      .querySelectorAll(".sr-dropdown-menu-open")
-      .forEach((el) => el.classList.remove("sr-dropdown-menu-open"));
-    if (!isOpen) {
-      menu.classList.add("sr-dropdown-menu-open");
+    // On mobile, toggle the dropdown instead of navigating
+    const isMobile = window.innerWidth <= 992 || body.classList.contains("sr-nav-open");
+    if (isMobile) {
+      event.preventDefault();
+      const isOpen = menu.classList.contains("sr-dropdown-menu-open");
+      document
+        .querySelectorAll(".sr-dropdown-menu-open")
+        .forEach((el) => el.classList.remove("sr-dropdown-menu-open"));
+      if (!isOpen) {
+        menu.classList.add("sr-dropdown-menu-open");
+      }
     }
   });
 

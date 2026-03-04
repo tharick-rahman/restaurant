@@ -9,22 +9,28 @@
 
   .sr-nav {
     position: fixed;
-    inset-block-start: calc(var(--header-height) + 8px);
-    inset-inline: 1.5rem;
-    border-radius: 1.4rem;
-    background: rgba(5, 5, 5, 0.98);
-    border: 1px solid rgba(241, 196, 107, 0.3);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.9);
-    padding: 1rem 1.1rem;
-    transform: translateY(-12px);
-    opacity: 0;
+    inset-block-start: var(--header-height);
+    inset-inline: 0;
+    inset-block-end: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    border-radius: 0;
+    background: rgba(5, 5, 5, 0.95);
+    border: none;
+    box-shadow: none;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    opacity: 1;
     pointer-events: none;
-    transition: opacity 0.16s ease-out, transform 0.16s ease-out;
+    transition: transform 0.3s ease-out;
+    overflow-y: auto;
+    z-index: 9998;
   }
 
   .sr-nav-open .sr-nav {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
     pointer-events: auto;
   }
 
@@ -47,6 +53,15 @@
     position: static;
     margin-top: 0.4rem;
     box-shadow: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease, max-height 0.2s ease;
+  }
+
+  .sr-dropdown-menu-open {
+    opacity: 1;
+    max-height: 500px;
   }
 
   .sr-hero-content {
@@ -124,3 +139,7 @@
   }
 }
 
+/* Prevent background scroll when mobile nav is open */
+body.sr-nav-open {
+  overflow: hidden !important;
+}

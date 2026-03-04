@@ -1,0 +1,224 @@
+.sr-about-hero {
+  background: radial-gradient(circle at top, #16110c, #050505 70%);
+}
+
+.sr-about-hero h1 {
+  font-size: clamp(2.2rem, 3.2vw, 2.8rem);
+  margin-bottom: 0.7rem;
+}
+
+.sr-about-hero p {
+  color: #d5cec5;
+}
+
+.sr-about-hero-images {
+  position: relative;
+}
+
+.sr-about-main {
+  border-radius: 1.8rem;
+  border: 1px solid rgba(241, 196, 107, 0.35);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.9);
+}
+
+.sr-about-secondary {
+  position: absolute;
+  width: 50%;
+  right: -4%;
+  bottom: -14%;
+  border-radius: 1.4rem;
+  border: 1px solid rgba(241, 196, 107, 0.6);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 1);
+}
+
+.sr-about-values {
+  background: #050505;
+}
+
+.sr-value-card {
+  background: #070707;
+  border-radius: 1.4rem;
+  border: 1px solid rgba(241, 196, 107, 0.22);
+  padding: 1.3rem 1.4rem;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.9);
+}
+
+.sr-value-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.sr-value-card p {
+  color: #d5cfc6;
+}
+
+.sr-about-timeline {
+  background: radial-gradient(circle at center, #171717, #050505 72%);
+}
+
+.sr-timeline {
+  border-left: 2px solid rgba(241, 196, 107, 0.6);
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sr-timeline-item {
+  position: relative;
+}
+
+.sr-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.7rem;
+  top: 0.3rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 999px;
+  border: 2px solid #050505;
+  background: linear-gradient(135deg, #f6d58a, #c99b3a);
+}
+
+.sr-timeline-year {
+  display: inline-block;
+  font-weight: 600;
+  color: #f1c46b;
+  margin-bottom: 0.25rem;
+}
+
+.sr-timeline-item p {
+  color: #d7d0c7;
+}
+
+@media (max-width: 992px) {
+  .sr-about-secondary {
+    position: static;
+    width: 90%;
+    margin-top: 1rem;
+  }
+}
+
+/* =========================
+   PARALLAX STATEMENT
+========================= */
+.sr-about-parallax {
+  background: url("../images/parallax.jpg") center/cover fixed no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sr-about-parallax-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.sr-about-parallax h2 {
+  color: #f6d58a;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.sr-about-parallax p {
+  color: #d5cec5;
+  max-width: 600px;
+  margin: auto;
+}
+
+
+/* =========================
+   STATS SECTION
+========================= */
+.sr-about-stats {
+  background: #050505;
+  padding: 6rem 0;
+}
+
+.sr-about-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.sr-about-stats-left h2 {
+  color: #f6d58a;
+  margin-bottom: 1rem;
+}
+
+.sr-about-stats-left p {
+  color: #d5cec5;
+}
+
+.sr-about-stats-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sr-stat-box {
+  padding: 1.8rem;
+  border-radius: 1.6rem;
+  background: #0a0a0a;
+  border: 1px solid rgba(241,196,107,0.2);
+  transition: all 0.4s ease;
+}
+
+.sr-stat-box:hover {
+  transform: translateX(10px);
+  border-color: rgba(241,196,107,0.6);
+  box-shadow: 0 20px 60px rgba(241,196,107,0.12);
+}
+
+.sr-stat-box h3 {
+  font-size: 2rem;
+  color: #f6d58a;
+}
+
+/* =========================
+   TESTIMONIAL
+========================= */
+.sr-about-testimonial {
+  background: radial-gradient(circle at center, #171717, #050505 72%);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.sr-testimonial-card {
+  max-width: 700px;
+  margin: auto;
+  padding: 3rem;
+  border-radius: 2rem;
+  background: #0a0a0a;
+  border: 1px solid rgba(241,196,107,0.3);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.95);
+}
+
+.sr-testimonial-card p {
+  font-size: 1.1rem;
+  color: #d5cec5;
+  margin-bottom: 1.5rem;
+}
+
+.sr-testimonial-card h4 {
+  color: #f6d58a;
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 992px) {
+  .sr-about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sr-about-parallax {
+    height: 50vh;
+  }
+}

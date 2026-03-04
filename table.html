@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly Restaurant | Reservation</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/table.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="sr-header">
+    <div class="sr-container sr-header-inner">
+      <a href="index.html" class="sr-logo">
+        <span class="sr-logo-main">Stackly</span>
+        <span class="sr-logo-sub">Restaurant</span>
+      </a>
+      <button class="sr-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="sr-nav">
+        <ul class="sr-nav-list">
+          <li class="sr-nav-item sr-nav-dropdown">
+            <button class="sr-nav-link sr-dropdown-toggle">
+              Home
+              <span class="sr-dropdown-icon">▾</span>
+            </button>
+            <ul class="sr-dropdown-menu">
+              <li><a href="index.html" class="sr-dropdown-link">Home 1 – Classic</a></li>
+              <li><a href="home2.html" class="sr-dropdown-link">Home 2 – Modern</a></li>
+            </ul>
+          </li>
+          <li class="sr-nav-item"><a href="menus.html" class="sr-nav-link">Menus</a></li>
+          <li class="sr-nav-item"><a href="chefs.html" class="sr-nav-link">Chefs</a></li>
+          <li class="sr-nav-item"><a href="about.html" class="sr-nav-link">About</a></li>
+          <li class="sr-nav-item"><a href="service.html" class="sr-nav-link">Service</a></li>
+          <li class="sr-nav-item"><a href="dashboard.html" class="sr-nav-link">Dashboard</a></li>
+          <li class="sr-nav-item"><a href="gallery.html" class="sr-nav-link">Gallery</a></li>
+          <li class="sr-nav-item"><a href="contact.html" class="sr-nav-link">Contact</a></li>
+          <li class="sr-nav-item"><a href="table.html" class="sr-button sr-button-gold sr-nav-cta">Book Table</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+<main>
+
+  <!-- 1️⃣ HERO SPLIT SECTION -->
+  <section class="sr-book-hero">
+    <div class="sr-container sr-book-hero-grid">
+      
+      <div class="sr-book-hero-text">
+        <p class="sr-section-label">Reservation</p>
+        <h1>Reserve Your Golden Experience</h1>
+        <p>
+          Indulge in flame-kissed flavors, curated wine pairings,
+          and an atmosphere crafted for unforgettable evenings.
+        </p>
+      </div>
+
+      <div class="sr-book-hero-image">
+        <img src="assets/dining2.avif" alt="Luxury Dining">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2️⃣ FLOATING GLASS BOOKING CARD -->
+  <section class="sr-book-form-section">
+    <div class="sr-container">
+      <div class="sr-book-card">
+        <h2>Book Your Table</h2>
+        <form id="reservationForm" class="sr-book-form">
+          <input type="text" id="guestName" placeholder="Full Name" required>
+          <input type="email" id="guestEmail" placeholder="Email" required>
+          <input type="date" id="reservationDate" required>
+          <input type="time" id="reservationTime" required>
+
+          <select id="guestCount" required>
+            <option value="">Guests</option>
+            <option>1</option>
+            <option>2</option>
+            <option>4</option>
+            <option>6</option>
+            <option>8+</option>
+          </select>
+
+          <select id="occasion">
+            <option>Regular</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+            <option>Corporate</option>
+          </select>
+
+          <button type="submit" class="sr-button sr-button-gold">
+            Confirm Reservation
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3️⃣ WHY RESERVE SECTION -->
+  <section class="sr-book-why">
+    <div class="sr-container sr-book-why-grid">
+
+      <div class="sr-why-box">
+        <h3>Priority Seating</h3>
+        <p>Skip waiting and enjoy seamless entry on arrival.</p>
+      </div>
+
+      <div class="sr-why-box">
+        <h3>Personalized Experience</h3>
+        <p>Customized décor and curated menu suggestions.</p>
+      </div>
+
+      <div class="sr-why-box">
+        <h3>VIP Ambience</h3>
+        <p>Private and luxury seating options available.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4️⃣ CONFIRMATION SECTION -->
+  <section class="sr-book-confirmation">
+    <div class="sr-container">
+      <div id="confirmationMessage" class="sr-confirmation-box"></div>
+    </div>
+  </section>
+    
+
+</main>
+
+
+<script src="js/main.js"></script>
+<script src="js/book.js"></script>
+</body>
+</html>

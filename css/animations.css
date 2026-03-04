@@ -1,0 +1,45 @@
+.sr-fade-up,
+.sr-fade-left,
+.sr-fade-right,
+.sr-zoom-in,
+.sr-float-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.sr-fade-left {
+  transform: translateX(-24px);
+}
+
+.sr-fade-right {
+  transform: translateX(24px);
+}
+
+.sr-zoom-in {
+  transform: scale(0.94);
+}
+
+.sr-float-in {
+  transform: translateY(26px);
+}
+
+.sr-animate-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@keyframes sr-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.sr-nav-cta:hover {
+  animation: sr-bounce 0.8s ease-in-out infinite;
+}
+

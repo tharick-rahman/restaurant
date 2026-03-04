@@ -1,0 +1,36 @@
+.sr-contact-hero {
+  background: radial-gradient(circle at top, #18110b, #050505 70%);
+}
+
+.sr-contact-hero h1 {
+  font-size: clamp(2.2rem, 3.2vw, 2.8rem);
+  margin-bottom: 0.7rem;
+}
+
+.sr-contact-hero p {
+  color: #d5cec5;
+}
+
+.sr-contact-hero-image img {
+  border-radius: 1.8rem;
+  border: 1px solid rgba(241, 196, 107, 0.35);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.95);
+}
+
+.sr-contact-map-wrap img {
+  border-radius: 1.6rem;
+  border: 1px solid rgba(241, 196, 107, 0.25);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.95);
+  margin-bottom: 0.6rem;
+}
+
+.sr-contact-map-wrap p {
+  color: #d3ccc4;
+}
+
+@media (max-width: 992px) {
+  .sr-contact-hero-image {
+    margin-top: 1.2rem;
+  }
+}
+

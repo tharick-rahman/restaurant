@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly Restaurant | Contact</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="sr-header">
+    <div class="sr-container sr-header-inner">
+      <a href="index.html" class="sr-logo">
+        <span class="sr-logo-main">Stackly</span>
+        <span class="sr-logo-sub">Restaurant</span>
+      </a>
+      <button class="sr-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="sr-nav">
+        <ul class="sr-nav-list">
+          <li class="sr-nav-item sr-nav-dropdown">
+            <button class="sr-nav-link sr-dropdown-toggle">
+              Home
+              <span class="sr-dropdown-icon">▾</span>
+            </button>
+            <ul class="sr-dropdown-menu">
+              <li><a href="index.html" class="sr-dropdown-link">Home 1 – Classic</a></li>
+              <li><a href="home2.html" class="sr-dropdown-link">Home 2 – Modern</a></li>
+            </ul>
+          </li>
+          <li class="sr-nav-item"><a href="menus.html" class="sr-nav-link">Menus</a></li>
+          <li class="sr-nav-item"><a href="chefs.html" class="sr-nav-link">Chefs</a></li>
+          <li class="sr-nav-item"><a href="about.html" class="sr-nav-link">About</a></li>
+          <li class="sr-nav-item"><a href="service.html" class="sr-nav-link">Service</a></li>
+          <li class="sr-nav-item"><a href="dashboard.html" class="sr-nav-link">Dashboard</a></li>
+          <li class="sr-nav-item"><a href="gallery.html" class="sr-nav-link">Gallery</a></li>
+          <li class="sr-nav-item"><a href="contact.html" class="sr-nav-link">Contact</a></li>
+          <li class="sr-nav-item"><a href="table.html" class="sr-button sr-button-gold sr-nav-cta">Book Table</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="sr-section sr-contact-hero">
+      <div class="sr-container sr-grid-2 sr-fade-up">
+        <div>
+          <p class="sr-section-label">Contact</p>
+          <h1>Let’s Talk About Your Next Visit</h1>
+          <p>Reach out for reservations, private events, collaborations, or feedback. We usually reply within one business day.</p>
+          <ul class="sr-contact-list">
+            <li><strong>Phone:</strong> +1 (800) 555‑STACK</li>
+            <li><strong>Email:</strong> hello@stacklyrestaurant.com</li>
+            <li><strong>Events:</strong> events@stacklyrestaurant.com</li>
+            <li><strong>Address:</strong> 21 Golden Lane, Downtown City</li>
+          </ul>
+        </div>
+        <div class="sr-contact-hero-image">
+          <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg" alt="Team at Stackly Restaurant" />
+        </div>
+      </div>
+    </section>
+
+    <section class="sr-section">
+      <div class="sr-container sr-grid-2 sr-fade-up">
+        <form class="sr-form" id="page-contact-form">
+          <div class="sr-form-row">
+            <div class="sr-form-group">
+              <label for="c-name">Full Name</label>
+              <input type="text" id="c-name" name="name" required />
+            </div>
+            <div class="sr-form-group">
+              <label for="c-email">Email</label>
+              <input type="email" id="c-email" name="email" required />
+            </div>
+            <div class="sr-form-group">
+              <label for="c-topic">Topic</label>
+              <select id="c-topic" name="topic">
+                <option>General Question</option>
+                <option>Reservation</option>
+                <option>Private Event</option>
+                <option>Feedback</option>
+              </select>
+            </div>
+          </div>
+          <div class="sr-form-group">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="sr-button sr-button-gold sr-button-full">Send Message</button>
+          <p class="sr-form-success" id="page-contact-success" aria-live="polite"></p>
+        </form>
+
+        <div class="sr-contact-map-wrap">
+          <img src="https://images.pexels.com/photos/2706379/pexels-photo-2706379.jpeg" alt="Map to Stackly Restaurant" />
+          <p>Find us at the corner of Golden Lane and Market Street, opposite the central park.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sr-footer">
+    <div class="sr-container sr-footer-inner">
+      <div class="sr-footer-brand">
+        <a href="index.html" class="sr-logo">
+          <span class="sr-logo-main">Stackly</span>
+          <span class="sr-logo-sub">Restaurant</span>
+        </a>
+        <p>We love hearing from our guests—let us know how we can serve you better.</p>
+      </div>
+    </div>
+    <div class="sr-footer-bottom">
+      <p>© <span id="current-year"></span> Stackly Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly Restaurant | Dashboard</title>
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="sr-header">
+    <div class="sr-container sr-header-inner">
+      <a href="index.html" class="sr-logo">
+        <span class="sr-logo-main">Stackly</span>
+        <span class="sr-logo-sub">Restaurant</span>
+      </a>
+
+      <button class="sr-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="sr-nav">
+        <ul class="sr-nav-list">
+          <li class="sr-nav-item sr-nav-dropdown">
+            <button class="sr-nav-link sr-dropdown-toggle">
+              Home
+              <span class="sr-dropdown-icon">▾</span>
+            </button>
+            <ul class="sr-dropdown-menu">
+              <li><a href="index.html" class="sr-dropdown-link">Home 1 – Classic</a></li>
+              <li><a href="home2.html" class="sr-dropdown-link">Home 2 – Modern</a></li>
+            </ul>
+          </li>
+          <li class="sr-nav-item"><a href="menus.html" class="sr-nav-link">Menus</a></li>
+          <li class="sr-nav-item"><a href="chefs.html" class="sr-nav-link">Chefs</a></li>
+          <li class="sr-nav-item"><a href="about.html" class="sr-nav-link">About</a></li>
+          <li class="sr-nav-item"><a href="service.html" class="sr-nav-link">Service</a></li>
+          <li class="sr-nav-item"><a href="dashboard.html" class="sr-nav-link">Dashboard</a></li>
+          <li class="sr-nav-item"><a href="gallery.html" class="sr-nav-link">Gallery</a></li>
+          <li class="sr-nav-item"><a href="contact.html" class="sr-nav-link">Contact</a></li>
+          <li class="sr-nav-item">
+            <a href="table.html" class="sr-button sr-button-gold sr-nav-cta">
+              Book Table
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="sr-dashboard-main">
+
+    <!-- HERO -->
+    <section class="sr-section sr-dashboard-hero">
+      <div class="sr-container sr-section-heading sr-fade-up">
+        <p class="sr-section-label">Dashboard</p>
+        <h1>Stackly Performance Overview</h1>
+        <p>
+        The Stackly Dashboard helps you manage your restaurant effortlessly. From reservations and orders to customer insights and service updates, everything you need is available in one place.
+        </p>
+      </div>
+    </section>
+
+    <section class="sr-section">
+      <div class="sr-container sr-dashboard-layout">
+
+        <!-- STATS -->
+        <div class="sr-dashboard-grid">
+          <div class="sr-stat-card sr-fade-up">
+            <h2>Today’s Reservations</h2>
+            <p class="sr-stat-big" id="dash-reservations">48</p>
+            <p class="sr-stat-sub">Updated live from online and phone bookings.</p>
+          </div>
+
+          <div class="sr-stat-card sr-fade-up">
+            <h2>Occupancy</h2>
+            <p class="sr-stat-big" id="dash-occupancy">76%</p>
+            <p class="sr-stat-sub">Current average across lunch and dinner slots.</p>
+          </div>
+
+          <div class="sr-stat-card sr-fade-up">
+            <h2>Top Dish Today</h2>
+            <p class="sr-stat-big">Stackly Charcoal Burger</p>
+            <p class="sr-stat-sub">Sold 92 portions so far.</p>
+          </div>
+        </div>
+        <!-- RESERVATION FILTER PANEL -->
+<div class="sr-dashboard-filter sr-fade-up">
+  <div class="sr-chart-card">
+    <div class="sr-chart-card-header">
+      <h2>Reservation Manager</h2>
+    </div>
+
+    <div class="sr-filter-controls">
+      <input type="text" id="filter-name" placeholder="Search by guest name..." />
+      
+      <select id="filter-occasion">
+        <option value="all">All Occasions</option>
+        <option value="Anniversary">Anniversary</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Family">Family</option>
+        <option value="Client Dinner">Client Dinner</option>
+        <option value="Friends">Friends</option>
+      </select>
+    </div>
+
+    <p id="no-results" style="display:none; color:#f6d58a; margin-top:10px;">
+      No reservations found.
+    </p>
+  </div>
+</div>
+<script>
+  // ==========================
+// RESERVATION FILTER SYSTEM
+// ==========================
+
+const nameInput = document.getElementById("filter-name");
+const occasionSelect = document.getElementById("filter-occasion");
+const tableBody = document.getElementById("reservation-table-body");
+const noResults = document.getElementById("no-results");
+
+function filterReservations() {
+  const nameValue = nameInput.value.toLowerCase();
+  const occasionValue = occasionSelect.value;
+
+  const rows = tableBody.querySelectorAll("tr");
+  let visibleCount = 0;
+
+  rows.forEach(row => {
+    const guest = row.cells[0].textContent.toLowerCase();
+    const occasion = row.cells[4].textContent;
+
+    const matchName = guest.includes(nameValue);
+    const matchOccasion =
+      occasionValue === "all" || occasion === occasionValue;
+
+    if (matchName && matchOccasion) {
+      row.style.display = "";
+      visibleCount++;
+    } else {
+      row.style.display = "none";
+    }
+  });
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+}
+
+nameInput.addEventListener("input", filterReservations);
+occasionSelect.addEventListener("change", filterReservations);
+</script>
+
+        <!-- LIVE ALERTS -->
+        <div class="sr-dashboard-alerts sr-fade-up">
+          <div class="sr-chart-card">
+            <div class="sr-chart-card-header">
+              <h2>Live Alerts</h2>
+            </div>
+
+            <div class="sr-alert-item">
+              <span class="sr-alert-badge warning"></span>
+              <div>
+                <strong>High Table Occupancy</strong>
+                <p>Occupancy crossed 75% for dinner slot.</p>
+              </div>
+            </div>
+
+            <div class="sr-alert-item">
+              <span class="sr-alert-badge info"></span>
+              <div>
+                <strong>New Online Reservation</strong>
+                <p>VIP booking for 8 guests confirmed.</p>
+              </div>
+            </div>
+
+            <div class="sr-alert-item">
+              <span class="sr-alert-badge danger"></span>
+              <div>
+                <strong>Low Inventory</strong>
+                <p>Imported truffle stock below threshold.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHARTS -->
+        <div class="sr-dashboard-charts">
+          <div class="sr-chart-card sr-fade-up">
+            <div class="sr-chart-card-header">
+              <h2>Weekly Revenue</h2>
+              <select id="revenue-range" class="sr-chart-select">
+                <option value="week">This Week</option>
+                <option value="month">This Month</option>
+              </select>
+            </div>
+            <canvas id="revenueChart"></canvas>
+          </div>
+
+          <div class="sr-chart-card sr-fade-up">
+            <h2>Category Performance</h2>
+            <canvas id="categoryChart"></canvas>
+          </div>
+        </div>
+
+        <!-- STAFF PERFORMANCE -->
+        <div class="sr-dashboard-staff sr-fade-up">
+          <div class="sr-chart-card">
+            <div class="sr-chart-card-header">
+              <h2>Top Performing Staff</h2>
+            </div>
+
+            <div class="sr-staff-list">
+              <div class="sr-staff-card">
+                <h3>Maria Rossi</h3>
+                <span>Pastry Chef</span>
+                <p>Customer rating: 4.9★</p>
+              </div>
+
+              <div class="sr-staff-card">
+                <h3>Daniel Carter</h3>
+                <span>Grill Specialist</span>
+                <p>Orders handled: 112 today</p>
+              </div>
+
+              <div class="sr-staff-card">
+                <h3>Kenji Watanabe</h3>
+                <span>Seafood Expert</span>
+                <p>Special request completions: 98%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESERVATION TABLE -->
+        <div class="sr-dashboard-table sr-fade-up">
+          <div class="sr-dashboard-table-header">
+            <h2>Upcoming Reservations</h2>
+            <input type="search" id="reservation-search" placeholder="Search by name..." />
+          </div>
+
+          <div class="sr-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Guest</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Guests</th>
+                  <th>Occasion</th>
+                </tr>
+              </thead>
+              <tbody id="reservation-table-body">
+                <tr>
+                  <td>Hannah Rose</td>
+                  <td>03 Mar</td>
+                  <td>19:30</td>
+                  <td>2</td>
+                  <td>Anniversary</td>
+                </tr>
+                <tr>
+                  <td>Daniel Thomas</td>
+                  <td>03 Mar</td>
+                  <td>20:00</td>
+                  <td>4</td>
+                  <td>Client Dinner</td>
+                </tr>
+                <tr>
+                  <td>Aisha Khan</td>
+                  <td>04 Mar</td>
+                  <td>19:00</td>
+                  <td>6</td>
+                  <td>Birthday</td>
+                </tr>
+                <tr>
+                  <td>Leo Martins</td>
+                  <td>04 Mar</td>
+                  <td>21:00</td>
+                  <td>3</td>
+                  <td>Friends</td>
+                </tr>
+                <tr>
+                  <td>Sofia Turner</td>
+                  <td>05 Mar</td>
+                  <td>18:30</td>
+                  <td>5</td>
+                  <td>Family</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+ 
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>

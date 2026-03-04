@@ -1,0 +1,187 @@
+.sr-page-hero {
+  background: radial-gradient(circle at top, #17100b, #050505 70%);
+}
+
+.sr-page-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.sr-page-hero-inner h1 {
+  font-size: clamp(2.2rem, 3vw, 2.6rem);
+  margin-bottom: 0.7rem;
+}
+
+.sr-page-hero-inner p {
+  color: #d7d0c6;
+}
+
+.sr-page-hero-inner img {
+  border-radius: 1.8rem;
+  border: 1px solid rgba(241, 196, 107, 0.4);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.9);
+  object-fit: cover;
+}
+
+.sr-service-card {
+  background: #070707;
+  border-radius: 1.6rem;
+  border: 1px solid rgba(241, 196, 107, 0.22);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  padding-bottom: 1.2rem;
+}
+
+.sr-service-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.sr-service-card h2 {
+  padding: 1rem 1.4rem 0.4rem;
+  font-size: 1.1rem;
+}
+
+.sr-service-card > p {
+  padding: 0 1.4rem;
+  color: #cbc4ba;
+}
+
+.sr-service-card .sr-list {
+  padding: 0.6rem 1.4rem 0.4rem;
+}
+
+.sr-service-steps {
+  background: #050505;
+}
+
+.sr-step-card {
+  background: #070707;
+  border-radius: 1.4rem;
+  border: 1px dashed rgba(241, 196, 107, 0.5);
+  padding: 1.2rem 1.3rem;
+}
+
+.sr-step-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.sr-step-card p {
+  color: #d1cabf;
+}
+
+@media (max-width: 992px) {
+  .sr-page-hero-inner {
+    grid-template-columns: minmax(0, 1.1fr);
+  }
+}
+
+/* =========================
+   VIP PRIVATE DINING
+========================= */
+.sr-service-vip {
+  background: #050505;
+  padding: 6rem 0;
+}
+
+.sr-service-vip-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.sr-service-vip-image img {
+  width: 100%;
+  border-radius: 2rem;
+  border: 1px solid rgba(241,196,107,0.4);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.95);
+  transition: transform 0.6s ease;
+}
+
+.sr-service-vip-image:hover img {
+  transform: scale(1.05);
+}
+
+.sr-service-vip-content h2 {
+  color: #f6d58a;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.sr-service-vip-content p {
+  color: #d7d0c6;
+  margin-bottom: 1.2rem;
+}
+
+.sr-service-vip-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sr-service-vip-content li {
+  margin-bottom: 0.6rem;
+  color: #e1dbd2;
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.sr-service-vip-content li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #f6d58a;
+}
+
+/* =========================
+   GLASS CTA SECTION
+========================= */
+.sr-service-cta {
+  background: linear-gradient(145deg, #111, #050505);
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sr-service-cta-box {
+  max-width: 750px;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(241,196,107,0.4);
+  box-shadow: 0 30px 80px rgba(241,196,107,0.08);
+  transition: all 0.4s ease;
+}
+
+.sr-service-cta-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 100px rgba(241,196,107,0.15);
+}
+
+.sr-service-cta-box h2 {
+  color: #f6d58a;
+  margin-bottom: 1rem;
+}
+
+.sr-service-cta-box p {
+  color: #d7d0c6;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+  .sr-service-vip-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sr-service-cta-box {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly Restaurant | Menus</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/menus.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="sr-header">
+    <div class="sr-container sr-header-inner">
+      <a href="index.html" class="sr-logo">
+        <span class="sr-logo-main">Stackly</span>
+        <span class="sr-logo-sub">Restaurant</span>
+      </a>
+      <button class="sr-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="sr-nav">
+        <ul class="sr-nav-list">
+          <li class="sr-nav-item sr-nav-dropdown">
+            <button class="sr-nav-link sr-dropdown-toggle">
+              Home
+              <span class="sr-dropdown-icon">▾</span>
+            </button>
+            <ul class="sr-dropdown-menu">
+              <li><a href="index.html" class="sr-dropdown-link">Home 1 – Classic</a></li>
+              <li><a href="home2.html" class="sr-dropdown-link">Home 2 – Modern</a></li>
+            </ul>
+          </li>
+          <li class="sr-nav-item"><a href="menus.html" class="sr-nav-link">Menus</a></li>
+          <li class="sr-nav-item"><a href="chefs.html" class="sr-nav-link">Chefs</a></li>
+          <li class="sr-nav-item"><a href="about.html" class="sr-nav-link">About</a></li>
+          <li class="sr-nav-item"><a href="service.html" class="sr-nav-link">Service</a></li>
+          <li class="sr-nav-item"><a href="dashboard.html" class="sr-nav-link">Dashboard</a></li>
+          <li class="sr-nav-item"><a href="gallery.html" class="sr-nav-link">Gallery</a></li>
+          <li class="sr-nav-item"><a href="contact.html" class="sr-nav-link">Contact</a></li>
+          <li class="sr-nav-item"><a href="table.html" class="sr-button sr-button-gold sr-nav-cta">Book Table</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="sr-section sr-menus-hero">
+      <div class="sr-container sr-section-heading sr-fade-up">
+        <p class="sr-section-label">Menus</p>
+        <h1>Explore Stackly Menus</h1>
+        <p>Choose from our all‑day à la carte, lunch sets, dinner tasting menus, and late‑night bites.</p>
+      </div>
+    </section>
+
+    <section class="sr-section">
+      <div class="sr-container">
+        <div class="sr-menu-category-tabs sr-fade-up">
+          <button class="sr-menu-category-tab sr-menu-category-tab-active" data-category="all-day">All Day</button>
+          <button class="sr-menu-category-tab" data-category="lunch">Lunch</button>
+          <button class="sr-menu-category-tab" data-category="dinner">Dinner</button>
+          <button class="sr-menu-category-tab" data-category="late-night">Late Night</button>
+        </div>
+
+        <div class="sr-menu-category-panels">
+          <div class="sr-menu-category-panel sr-menu-category-panel-active" data-category-panel="all-day">
+            <div class="sr-menus-grid">
+              <article class="sr-menus-item sr-fade-up">
+                <img src="assets/home2 food.jpeg" alt="All day platter" />
+                <div>
+                  <h2>Stackly All‑Day Platter</h2>
+                  <p>A shareable board of sliders, wings, loaded fries, and dips for the whole table.</p>
+                </div>
+                <span class="sr-price">$42</span>
+              </article>
+              <article class="sr-menus-item sr-fade-up">
+                <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Signature burger" />
+                <div>
+                  <h2>Signature Stackly Burger</h2>
+                  <p>Double patty, cheddar, caramelized onions, and gold‑dust aioli on a brioche bun.</p>
+                </div>
+                <span class="sr-price">$21</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="sr-menu-category-panel" data-category-panel="lunch">
+            <div class="sr-menus-grid">
+              <article class="sr-menus-item">
+                <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Lunch bowl" />
+                <div>
+                  <h2>Grilled Power Bowl</h2>
+                  <p>Charred chicken, quinoa, roasted veggies, and citrus dressing.</p>
+                </div>
+                <span class="sr-price">$16</span>
+              </article>
+              <article class="sr-menus-item">
+                <img src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg" alt="Pasta lunch" />
+                <div>
+                  <h2>Lunch‑Size Truffle Pasta</h2>
+                  <p>A lighter portion of our famous golden truffle pasta.</p>
+                </div>
+                <span class="sr-price">$18</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="sr-menu-category-panel" data-category-panel="dinner">
+            <div class="sr-menus-grid">
+              <article class="sr-menus-item">
+                <img src="https://images.pexels.com/photos/4106483/pexels-photo-4106483.jpeg" alt="Steak dinner" />
+                <div>
+                  <h2>Blackstone Ribeye</h2>
+                  <p>Bone‑in ribeye with garlic butter, charred greens, and potato gratin.</p>
+                </div>
+                <span class="sr-price">$38</span>
+              </article>
+              <article class="sr-menus-item">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" alt="Seafood dinner" />
+                <div>
+                  <h2>Gold Coast Seafood Medley</h2>
+                  <p>Shrimp, mussels, and fish in a saffron broth, served with toasted bread.</p>
+                </div>
+                <span class="sr-price">$34</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="sr-menu-category-panel" data-category-panel="late-night">
+            <div class="sr-menus-grid">
+              <article class="sr-menus-item">
+                <img src="https://images.pexels.com/photos/327158/pexels-photo-327158.jpeg" alt="Late night fries" />
+                <div>
+                  <h2>Midnight Fries Tower</h2>
+                  <p>Triple‑stacked fries with cheese sauce, jalapeños, and crispy onions.</p>
+                </div>
+                <span class="sr-price">$14</span>
+              </article>
+              <article class="sr-menus-item">
+                <img src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg" alt="Mini sliders" />
+                <div>
+                  <h2>Mini Slider Flight</h2>
+                  <p>Four different sliders, from spicy buffalo to smoky BBQ.</p>
+                </div>
+                <span class="sr-price">$18</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="sr-section sr-signature">
+  <div class="sr-container sr-signature-grid">
+
+    <div class="sr-signature-image sr-slide-left">
+      <img src="assets/home2 food.jpeg" alt="Chef Signature Dish">
+    </div>
+
+    <div class="sr-signature-content sr-slide-right">
+      <p class="sr-section-label">Chef’s Signature</p>
+      <h2>Golden Truffle Royale</h2>
+      <p>
+        A masterpiece crafted with imported black truffle, aged parmesan,
+        and flame-seared tenderloin, finished with edible gold flakes.
+        A true statement of Stackly’s culinary excellence.
+      </p>
+      <a href="table.html" class="sr-button sr-button-gold">
+        Reserve & Taste
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="sr-section sr-pairing">
+  <div class="sr-container sr-fade-up">
+
+    <p class="sr-section-label">Perfect Pairings</p>
+    <h2>Wine & Beverage Selection</h2>
+    <p class="sr-section-description">
+      Our sommelier curates an exquisite collection of vintage wines,
+      handcrafted cocktails, and rare spirits to elevate every bite.
+    </p>
+
+    <div class="sr-pairing-grid">
+      <div class="sr-pairing-card">
+        <h3>Premium Red Wines</h3>
+        <p>Aged French Bordeaux and Italian Barolo selections.</p>
+      </div>
+      <div class="sr-pairing-card">
+        <h3>Signature Cocktails</h3>
+        <p>Gold-infused martinis and smoked whiskey blends.</p>
+      </div>
+      <div class="sr-pairing-card">
+        <h3>Rare Spirits</h3>
+        <p>Exclusive single malts and limited-edition reserves.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="sr-section sr-why">
+  <div class="sr-container">
+
+    <p class="sr-section-label sr-fade-up">Why Choose Us</p>
+    <h2 class="sr-fade-up">The Stackly Experience</h2>
+
+    <div class="sr-why-grid">
+      <div class="sr-why-card">
+        <h3>Premium Ingredients</h3>
+        <p>Only the finest imported and organic produce.</p>
+      </div>
+      <div class="sr-why-card">
+        <h3>Luxury Ambience</h3>
+        <p>Black & gold interiors designed for elegance.</p>
+      </div>
+      <div class="sr-why-card">
+        <h3>World-Class Chefs</h3>
+        <p>International culinary artists at your service.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </main>
+
+
+  <script src="js/main.js"></script>
+  <script src="js/menus.js"></script>
+</body>
+</html>
+

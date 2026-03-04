@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly Restaurant | Gallery</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="sr-header">
+    <div class="sr-container sr-header-inner">
+      <a href="index.html" class="sr-logo">
+        <span class="sr-logo-main">Stackly</span>
+        <span class="sr-logo-sub">Restaurant</span>
+      </a>
+      <button class="sr-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="sr-nav">
+        <ul class="sr-nav-list">
+          <li class="sr-nav-item sr-nav-dropdown">
+            <button class="sr-nav-link sr-dropdown-toggle">
+              Home
+              <span class="sr-dropdown-icon">▾</span>
+            </button>
+            <ul class="sr-dropdown-menu">
+              <li><a href="index.html" class="sr-dropdown-link">Home 1 – Classic</a></li>
+              <li><a href="home2.html" class="sr-dropdown-link">Home 2 – Modern</a></li>
+            </ul>
+          </li>
+          <li class="sr-nav-item"><a href="menus.html" class="sr-nav-link">Menus</a></li>
+          <li class="sr-nav-item"><a href="chefs.html" class="sr-nav-link">Chefs</a></li>
+          <li class="sr-nav-item"><a href="about.html" class="sr-nav-link">About</a></li>
+          <li class="sr-nav-item"><a href="service.html" class="sr-nav-link">Service</a></li>
+          <li class="sr-nav-item"><a href="dashboard.html" class="sr-nav-link">Dashboard</a></li>
+          <li class="sr-nav-item"><a href="gallery.html" class="sr-nav-link">Gallery</a></li>
+          <li class="sr-nav-item"><a href="contact.html" class="sr-nav-link">Contact</a></li>
+          <li class="sr-nav-item"><a href="index.html#reservation" class="sr-button sr-button-gold sr-nav-cta">Book Table</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="sr-section sr-gallery-hero">
+      <div class="sr-container sr-section-heading sr-fade-up">
+        <p class="sr-section-label">Gallery</p>
+        <h1>Inside Stackly Restaurant</h1>
+        <p>Browse our interiors, dishes, desserts, and moments from real celebrations.</p>
+      </div>
+    </section>
+
+    <section class="sr-section">
+      <div class="sr-container">
+        <div class="sr-gallery-grid-page">
+          <figure class="sr-gallery-card sr-zoom-in">
+            <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg" alt="Guests enjoying dinner" />
+          </figure>
+          <figure class="sr-gallery-card sr-zoom-in">
+            <img src="https://images.pexels.com/photos/4109134/pexels-photo-4109134.jpeg" alt="Table full of food" />
+          </figure>
+          <figure class="sr-gallery-card sr-zoom-in">
+            <img src="https://images.pexels.com/photos/7525182/pexels-photo-7525182.jpeg" alt="Bar area" />
+          </figure>
+          <figure class="sr-gallery-card sr-zoom-in">
+            <img src="https://images.pexels.com/photos/4099233/pexels-photo-4099233.jpeg" alt="Steak closeup" />
+          </figure>
+          <figure class="sr-gallery-card sr-zoom-in">
+            <img src="https://images.pexels.com/photos/3731474/pexels-photo-3731474.jpeg" alt="Dessert plate" />
+          </figure>
+          <figure class="sr-gallery-card sr-zoom-in">
+            <img src="https://images.pexels.com/photos/6745742/pexels-photo-6745742.jpeg" alt="Cocktails" />
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sr-footer">
+    <div class="sr-container sr-footer-inner">
+      <div class="sr-footer-brand">
+        <a href="index.html" class="sr-logo">
+          <span class="sr-logo-main">Stackly</span>
+          <span class="sr-logo-sub">Restaurant</span>
+        </a>
+        <p>A snapshot of the black‑and‑gold experience at Stackly.</p>
+      </div>
+    </div>
+    <div class="sr-footer-bottom">
+      <p>© <span id="current-year"></span> Stackly Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

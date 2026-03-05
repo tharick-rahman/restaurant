@@ -126,6 +126,23 @@
     grid-template-columns: minmax(0, 1.1fr);
   }
 
+  .sr-footer-container {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .sr-footer-logo img {
+    max-width: 100px;
+  }
+
+  .sr-logo-main {
+    font-size: 18px;
+  }
+
+  .sr-logo-sub {
+    font-size: 9px;
+  }
+
   .sr-footer-inner {
     flex-direction: column;
   }

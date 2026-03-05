@@ -346,6 +346,7 @@ h3 {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:40px;
+  align-items: start;
 }
 
 /* Logo */
@@ -354,20 +355,29 @@ h3 {
   margin-bottom:15px;
 }
 
+.sr-footer-logo img {
+  max-width: 120px;
+  height: auto;
+}
+
 .sr-logo-main{
-  font-size:24px;
+  font-size:20px;
   font-weight:700;
   color:#f1c46b;
 }
 
 .sr-logo-sub{
   display:block;
-  font-size:12px;
+  font-size:10px;
   letter-spacing:3px;
   color:#9b968d;
 }
 
 /* Brand */
+
+.sr-footer-brand {
+  text-align: left;
+}
 
 .sr-footer-brand p{
   font-size:14px;
@@ -483,4 +493,30 @@ h3 {
   background:#f1c46b;
   color:#040404;
   transform:translateY(-3px);
+}
+/* Logo container */
+.sr-logo{
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image */
+.sr-logo img{
+  width: 160px;        /* desktop size */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tablet view */
+@media (max-width: 992px){
+  .sr-logo img{
+    width: 140px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px){
+  .sr-logo img{
+    width: 120px;
+  }
 }
